@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,700&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,700;1,500;1,700&display=swap');
+$white: hsl(0, 0%, 100%);
+$greyblue:hsl(228, 12%, 48%);
+
+$darkBlue:hsl(212, 21%, 14%);
+$cream: hsl(30, 38%, 92%);
+$darkCyan: hsl(158, 36%, 37%);
+// #1e2d12
+$br: 8px;
+$monserat:'Montserrat', sans-serif;
+$Fraunces: 'Fraunces', serif;
+
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body{
+
+    background-color: $cream ;
+}
+img{
+    max-width: 100%;
+    width: 100%;
+
+   
+}
+
+.wrapper{
+    
+.box{
+    width: 600px;
+    margin: 150px auto;
+    display: flex;
+
+    background: $white;
+    border-radius: $br;
+    }
+
+.box div{
+    width: 50%;
+    border-radius: $br;
+}
+ .desk{
+     width: 100%;
+     border-bottom-left-radius: $br;
+     border-top-left-radius: $br;
+     height: 100%
+
+}
+.mob{
+    display: none;
+ 
+    
+}
+.txt-box{
+
+    padding: 30px;
+
+    .heading{
+        font-family: $monserat;
+        font-weight: 300;
+        letter-spacing: 4px;
+    }
+    .name{
+        font-family: $Fraunces;
+        padding: 25px 0px;
+    }
+
+    .descrip{
+        font-size: 14px;
+        font-family: $monserat;
+        padding: 0px 0px 20px;
+        line-height: 1.7;
+    }
+    .price{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    margin: 0px 0px 20px;
+    .discount{
+        font-size: 40px;
+        color: $darkCyan;
+        font-family: $Fraunces;
+    }
+        } 
+    .add{
+        width: 100%;
+        padding: 15px;
+        background: $darkCyan;
+        color: $white;
+        border-radius: $br;
+        font-family: $monserat;
+        text-align: center;
+       
+
+    }
+    .add:active{
+        background:#1A3E2E;
+
+    }
+}
+
+}
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    @media (max-width: 585px) {
+
+        .box{
+            width: 90% !important;
+            flex-direction: column !important;
+    
+        }
+        .box  div{
+            width: 100% !important;
+        }
+        .mob{
+            display: block !important;
+            width: 100%;
+        border-radius: $br $br 0px 0px;
+            height: 100%
+        }
+        .desk{
+            display: none;
+        }
+
+        .price{
+            justify-content: flex-start !important;
+        }
+        
+    }
